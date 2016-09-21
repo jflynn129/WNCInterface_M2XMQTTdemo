@@ -23,35 +23,39 @@ How to run the examples
 To run the examples, please follow the steps below:
 
 1. Launch [mbed online compiler](https://mbed.org/compiler/) in your browser
-2. Click `New` to create a new program, select `Empty Program` as the template and give it a name, then click `OK`.
-3. Right click on the project you just created, select `Import Library…->From Import Wizard…`, select `Libraries` tab, use the scrollbar or the search box at the right to find `mbed` library, double click it to import it.
-4. Use the same step as #3 to import `mbed-rtos` and `EthernetInterface` (mbed official) libraries.
 
-    **NOTE**: To Run the `PostExample` example, you also need to import `LM75B` library in the same way to use the temperature sensor.
+2. From within the mbed.org compiler IDE, create the example program by:
+   2.1) Right click on 'My Programs' and select 'New Program'.  Select 'Import Library' from the drop-down, then 'From URL'.  
+         use https://github.com/jflynn129/WNCInterface_M2XMQTTdemo as the URL to import from.
+         This will results in one file being imported, main.cpp.
 
-5. Right click on the project, select `Import Library…->From URL…`, paste the following URL into `Source URL` box:
+   2.2) Create the WNCInterface.
+         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
+         this point, you will be asked for the Source URL, use https://github.com/jflynn129/WNCInterface.git. The dialog will 
+         automatically populate as a Library, set the import name and use 'WNCInterface_HTTP' as the Target Path.  Note that
+         the Library name will take the name of the github repository including the ".git", remove the ".git" suffix to 
+         successfully import.
 
-    ```
-    http://mbed.org/users/defmacro/code/minimal-json/
-    ```
+   2.2.1) Now import the WNC Controller class.  Right click on the WNCInterface label and select 'Import Library' from 
+         the drop-down, then 'From URL'.  Use https://developer.mbed.org/users/fkellermavnet/code/WncControllerK64F/ as the 
+         and the other fields will be populated correctly.
 
-    Click `Import` to import minimal-json library.
-6. Use the same step as #5 to import minimal-mqtt library:
+   2.3)  Create a MINIMAL-JSON library.
+         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  
+         At this point,  use https://developer.mbed.org/users/defmacro/code/minimal-json/. 
 
-    ```
-    https://mbed.org/users/defmacro/code/minimal-mqtt/
-    ```
+   2.3)  Create a MINIMAL-MQTT library.
+         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
+         this point,  use https://developer.mbed.org/users/defmacro/code/minimal-mqtt/. 
 
-7. Use the same step as #5 to import the following M2X client library:
+   2.4) Create the mbed-rtos and mbed libraries.
+         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From 
+         Import Wizard'.  At this point, enter 'mbed' in the search box and search.  Multiple entries will be displayed.  
+         highlight 'mbed' and 'mbed-rtos' and select 'import'.
 
-    ```
-    https://developer.mbed.org/users/citrusbyte/code/M2XMQTTClient/
-    ```
+3. You now have all the components for the example program. At a minimum you will need to modify a few of the key variables
+   such as iCLIENTID and TOPIC.  
 
-8. Create a file named `main.cpp`, and paste in any of the examples. Modify the M2X API Key, device ID or stream name as needed in the examples. You can find existing examples [here](https://github.com/attm2x/m2x-arm-mbed-mqtt/tree/master/examples).
-9. At the top right corner, make sure you are selecting the same platform as your board.
-10. When you are done, click `Compile`. if no error is found, a bin file will be downloaded to your computer.
-11. Copy that bin file to your mbed microcontroller, press the `reset` button, then you should be able to run the program!
 
 Variables used in Examples
 ==========================
