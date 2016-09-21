@@ -30,7 +30,7 @@ To run the examples, please follow the steps below:
          This will results in one file being imported, main.cpp.
 
    2.2) Create the WNCInterface.
-         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
+         Righ click on the WNCInterface_M2XMQTTdemo program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
          this point, you will be asked for the Source URL, use https://github.com/jflynn129/WNCInterface.git. The dialog will 
          automatically populate as a Library, set the import name and use 'WNCInterface_HTTP' as the Target Path.  Note that
          the Library name will take the name of the github repository including the ".git", remove the ".git" suffix to 
@@ -41,15 +41,19 @@ To run the examples, please follow the steps below:
          and the other fields will be populated correctly.
 
    2.3)  Create a MINIMAL-JSON library.
-         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  
+         Righ click on the WNCInterface_M2XMQTTdemo program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  
          At this point,  use https://developer.mbed.org/users/defmacro/code/minimal-json/. 
 
    2.3)  Create a MINIMAL-MQTT library.
-         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
+         Righ click on the WNCInterface_M2XMQTTdemo program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
          this point,  use https://developer.mbed.org/users/defmacro/code/minimal-mqtt/. 
 
-   2.4) Create the mbed-rtos and mbed libraries.
-         Righ click on the WNCInterface_MQTT_hivemq program entry.  Select 'Import Library' from the drop-down, then 'From 
+   2.4)  Create a M2XMQTTClient library.
+         Righ click on the WNCInterface_M2XMQTTdemo program entry.  Select 'Import Library' from the drop-down, then 'From URL'.  At
+         this point,  use https://developer.mbed.org/users/citrusbyte/code/M2XMQTTClient/
+
+   2.5) Create the mbed-rtos and mbed libraries.
+         Righ click on the WNCInterface_M2XMQTTdemo program entry.  Select 'Import Library' from the drop-down, then 'From 
          Import Wizard'.  At this point, enter 'mbed' in the search box and search.  Multiple entries will be displayed.  
          highlight 'mbed' and 'mbed-rtos' and select 'import'.
 
